@@ -1,8 +1,8 @@
 #include <Wire.h>
 #include <Adafruit_PWMServoDriver.h>
-
-#define MIN_PWM_PULSE 650
-#define MAX_PWM_PULSE 2350
+// The Max and Min PWM pulse has to be calibrated first.
+#define MIN_PWM_PULSE 150
+#define MAX_PWM_PULSE 550
 
 Adafruit_PWMServoDriver driver = Adafruit_PWMServoDriver(0x40);
 
@@ -16,5 +16,5 @@ void setup() {
 
 
 void loop() {
-  driver.setPWM(0, 0, 550);
+  driver.setPWM(0, 0, 150);
 }
