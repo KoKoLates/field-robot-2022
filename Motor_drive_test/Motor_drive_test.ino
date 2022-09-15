@@ -26,8 +26,8 @@
 
 void loop(){
   // Moving Forward
-  analogWrite(LMotor_LPWM, 100);
-  analogWrite(LMotor_RPWM, 0);
-  analogWrite(RMotor_RPWM, 100);
-  analogWrite(RMotor_LPWM, 0);
+  analogWrite(LMotor_LPWM, 0);
+  analogWrite(LMotor_RPWM, 100);
+  analogWrite(RMotor_RPWM, 0);
+  analogWrite(RMotor_LPWM, 100);
 }
