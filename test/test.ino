@@ -1,28 +1,37 @@
-#include <Wire.h>
-#include <Adafruit_PWMServoDriver.h>
+#include "test.h"
 // The Max and Min PWM pulse has to be calibrated first.
-#define MIN_PWM_WIDTH 500
-#define MAX_PWM_WIDTH 2500
-
-Adafruit_PWMServoDriver driver = Adafruit_PWMServoDriver();
+test t(2500, 500, 60);
+//test t(2400, 500, 50); // sg90
+char flag = '0';
 
 void setup() {
   Serial.begin(9600);
-  driver.begin();
-
-  // Analog servos run around 50 HZ updates
-  driver.setPWMFreq(60);
+  t.initialize();
 }
 
 // 0 --> short one, 1 --> longer one
+// A4 --> SDA, A5 --> SCL
+// Initial status 0(a) --> 65, 1(b) --> 100 angle (degree)
 void loop() {
-  int max_width = int(float(MAX_PWM_WIDTH)/1000000 *60 * 4096);
-  int min_width = int(float(MIN_PWM_WIDTH)/1000000 *60 * 4096);
-  driver.setPWM(0, 0, angleToPulse(30, max_width, min_width));
-  driver.setPWM(1, 0, angleToPulse(90, max_width, min_width));
-}
+  if(Serial.available()){
+    flag = Serial.read();
+  }
+  switch(flag){
+      case '1':
+        t.moveTo(15, 15);
+        break;
+      case '2':
+        t.moveTo(20, 20);
+        break;
+      case '3':
+        t.moveTo(20, -10);
+        break;
 
-int angleToPulse(int ang, int max_w, int min_w){
-  int pulse = map(ang, 0, 300, min_w, max_w);
-  return pulse; 
+      case '4':
+        t.moveTo(30, 0);
+        break;
+      case '0':
+        t.resetInit();
+        break;
+    }
 }
