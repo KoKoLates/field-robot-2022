@@ -3,8 +3,6 @@ import numpy as np
 
 # Configue the frame of video stream
 cap = cv2.VideoCapture(1)
-cap.set(3, 640) # Setting the frame width
-cap.set(4, 480) # Setting the frame height
 
 # Creating a window for the threshold picker
 cv2.namedWindow('Color Picker')
