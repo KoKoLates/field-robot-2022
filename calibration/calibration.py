@@ -1,4 +1,3 @@
-from tkinter.tix import Tree
 import cv2
 import glob
 import numpy as np
