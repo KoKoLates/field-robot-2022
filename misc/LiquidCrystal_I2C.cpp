@@ -1,11 +1,10 @@
-//YWROBOT
-//last updated on 21/12/2011
-//Tim Starling Fix the reset bug (Thanks Tim)
-//wiki doc http://www.dfrobot.com/wiki/index.php?title=I2C/TWI_LCD1602_Module_(SKU:_DFR0063)
-//Support Forum: http://www.dfrobot.com/forum/
-//Compatible with the Arduino IDE 1.0
-//Library version:1.1
-
+// YWROBOT
+// last updated on 21/12/2011
+// Tim Starling Fix the reset bug (Thanks Tim)
+// wiki doc http://www.dfrobot.com/wiki/index.php?title=I2C/TWI_LCD1602_Module_(SKU:_DFR0063)
+// Support Forum: http://www.dfrobot.com/forum/
+// Compatible with the Arduino IDE 1.0
+// Library version:1.1
 
 #include "LiquidCrystal_I2C.h"
 #include <inttypes.h>
@@ -33,7 +32,7 @@ inline void LiquidCrystal_I2C::write(uint8_t value) {
 
 
 // When the display powers up, it is configured as follows:
-//
+
 // 1. Display clear
 // 2. Function set: 
 //    DL = 1; 8-bit interface data 
@@ -46,7 +45,7 @@ inline void LiquidCrystal_I2C::write(uint8_t value) {
 // 4. Entry mode set: 
 //    I/D = 1; Increment by 1
 //    S = 0; No shift 
-//
+
 // Note, however, that resetting the Arduino doesn't reset the LCD, so we
 // can't assume that its in that state when a sketch starts (and the
 // LiquidCrystal constructor is called).

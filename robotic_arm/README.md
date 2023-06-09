@@ -5,7 +5,7 @@
 * `MG996R` for arm machenism / `SG90` for gripper.
 * `PCA9685` servo driver for multi-servo PWM manager, control and driving.
 * The import unit are stored inside the water-proof container.
-*  [**Adafruit_PCA9685 PWM Library**](http://adafruit.github.io/Adafruit-PWM-Servo-Driver-Library/html/class_adafruit___p_w_m_servo_driver.html#a3f400e2cc3df479ed98d0ce7e7a0860d)
+*  [`motor driver | adafruit_PCA9685 pwm library`](http://adafruit.github.io/Adafruit-PWM-Servo-Driver-Library/html/class_adafruit___p_w_m_servo_driver.html#a3f400e2cc3df479ed98d0ce7e7a0860d)
 
 ![image](./images/servo_01.jpg) ![image](./images/control_center_01.jpg)
 

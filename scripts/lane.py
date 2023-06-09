@@ -1,11 +1,8 @@
-import cv2 # Import the OpenCV library to enable computer vision
-import numpy as np # Import the NumPy scientific computing library
-import edge_detection as edge # Handles the detection of lane lines
-import matplotlib.pyplot as plt # Used for plotting and error checking
- 
-# Author: Addison Sears-Collins
-# https://automaticaddison.com
-# Description: Implementation of the Lane class 
+import cv2 
+import numpy as np 
+import edge_detection as edge 
+import matplotlib.pyplot as plts
+
  
 filename = 'Lane.jpg'
  

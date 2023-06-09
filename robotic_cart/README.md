@@ -1,8 +1,8 @@
 # Robotic Cart
 `robotic cart` 、 `side panel` 
 
-## Side Panel
-Due to the robot is go through in the outdoor field environments, we hope to design `shock absorber` 、 `continuous track` wheel.
+## Scroll wheel and Support Structures
+Due to the robot is go through in the outdoor field environments, we hope to design `shock absorber` 、 `continuous track` scroll wheel.
 
 __1. Designs in CAD__
 

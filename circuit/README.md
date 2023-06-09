@@ -3,33 +3,33 @@
 
 __1. Computational Unit__ <br>
 
-* Arduino Mega / Arduino Nano -> `controller`
-* Raspberry Pi 4
-* NVIDIA Jetson Nano
+* arduino mega -> `dc motor control` / arduino nano -> `servo motor`
+* raspberry pi 4 (`wip`/`template`)
+* nvidia jetson nano
 
 __2.Electrical Unit__ <br>
 
 * IBT2 -> `H-Bridge`
-* Voltage Converter `HW319-V6.0`
-* Voltage Indicator
-* Battery (`12v`) / Battery pack (`5v/2a`)
-* Emergency Button `LA38`
+* voltage converter `HW319-V6.0` / voltage indicator
+* battery (`12v`) / battery pack (`5v/2a`) for computation unit
+* emergency button `LA38`
 
 __3.Sensors and Acuator__ <br>
 
-* Step Motor / Servo Motor
-* Relay `SRD-05VDC-SL-C` -> water pump
+* step motor and servo motor
+* relay `SRD-05VDC-SL-C` -> water pump
 
 
 ## Implements
-**Testing** | `controller`、 `H-bridge`、 `regulator` and `DC motor`. <br>
-* Testing the driven part that connect the DC motor with H-Bridge and `12v` DC Battery.
-* Using the Arduino Mega as the controller for `PWN` signal inputs.
-* Check the general switch and emergency button work.
+###### tags:  `controller`、 `h-bridge`、 `regulator`、 `dc motor`
 
-![image](./images/circuit_01.jpg) ![image](./circuit.png)
+* Testing the driven part that connect the dc motor with h-bridge (`L298n`) and `12v` dc battery (here we test on power supplier first).
+* Using the arduino mega as the controller for `PWN` signal output.
+* check the general switch and emergency button work properly.
 
-**Water-proof container** <br>
+![image](./circuit.png) ![image](./images/circuit_01.jpg)
+
+###### tags: `eletric boxes` 、 `water-proof`
 * The voltage for each components are indicating strictly.
 * The all important unit for controll and operation are places inside the water-proof container both for robotic cart and for the dummy arm.
 * There are maly three type of voltage being managed. `12v` for DC motor driven; two `5v` one is for the main controller and other sensors, the other is for the servo motor on the robotic arm which is driven by the servo driver (`PCA9685`).

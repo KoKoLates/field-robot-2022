@@ -1,3 +1,9 @@
+// The source code for dummy robotic arm control
+// author: Po-Ting Ko
+// last updated on 11/04/2022
+// Compatible with the Arduino IDE 1.0
+// Library version:1.1
+
 #include "arm.h"
 
 arm::arm(int i2c_address, int frequency){
